@@ -53,4 +53,18 @@ exports.updateWorkshopCardStatus = async (req, res) => {
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
+
+//   // Delete a workshop card by its ID
+// exports.deleteWorkshopCard = async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const deletedCard = await WorkshopCard.findByIdAndDelete(id);
+
+//     if (!deletedCard) return res.status(404).json({ message: 'Workshop card not found' });
+//     res.status(200).json({ message: 'Workshop card deleted successfully' });
+//   } catch (error) {
+//     res.status(500).json({ message: error.message });
+//   }
+// };
+
 };

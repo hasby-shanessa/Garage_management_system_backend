@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
    const path = require('path');
-const { createWorkshopCard, getAllWorkshopCards, getWorkshopCardById, updateWorkshopCardStatus } = require('../controllers/workshopCardController');
+const { createWorkshopCard, getAllWorkshopCards, getWorkshopCardById, updateWorkshopCardStatus, deleteWorkshopCard } = require('../controllers/workshopCardController');
    const workshopCardController = require(path.join(__dirname, '..', 'controllers', 'workshopCardController'));
 
    // GET all workshop cards
@@ -20,5 +20,8 @@ const { createWorkshopCard, getAllWorkshopCards, getWorkshopCardById, updateWork
    // UPDATE a workshop card status
    // router.put('/:id/status', (req, res)=>{workshopCardController.updateWorkshopCardStatus} );
    router.put('/:id/status', updateWorkshopCardStatus)
+
+   // // DELETE a workshop card
+   // router.delete('/:id', deleteWorkshopCard);
 
    module.exports = router;
